@@ -1,0 +1,18 @@
+.about {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 50px 20px; /* Add padding to the top and bottom, and a bit on the sides */
+  }
+  
+  .about h1 {
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 20px; /* Add some spacing below the title */
+    color: #333; /* Dark color for better contrast */
+  }
+  
+  .about p {
+    font-size: 1.2rem; /* Font size for paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+  }
+  

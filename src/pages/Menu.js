@@ -1,6 +1,5 @@
 import React from "react";
 import { MenuList } from "../helpers/MenuList";
-import MenuItem from "../components/MenuItem";
 import "../styles/Menu.css";
 
 function Menu() {
@@ -8,30 +7,20 @@ function Menu() {
     <div className="menu">
       <h1 className="menuTitle">Our Menu</h1>
       <div className="menuList">
-        {MenuList.map((menuItem, key) => {
-          return (
-            <div>
-              <img className="images" src={menuItem.image} />
-              <h1>
-                {menuItem.name} {menuItem.price}
-              </h1>
-            </div>
-          );
-        })}
+        <ul>
+          {MenuList.map((menuItem, index) => (
+            <li key={index}>
+              <div className="menuItem">
+                <img src={menuItem.image} alt={menuItem.name} />
+                <h3>{menuItem.name}</h3>
+                <p>${menuItem.price}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 }
 
 export default Menu;
-
-/*{MenuList.map((menuItem, key) => {
-  return (
-    <MenuItem
-      key={key}
-      name={menuItem.name}
-      price={menuItem.price}
-      image={menuItem.image}
-    />
-  );
-})}*/
